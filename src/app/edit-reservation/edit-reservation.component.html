@@ -1,0 +1,14 @@
+<h2>Modifier la Réservation</h2>
+<form [formGroup]="ReservationF" (ngSubmit)="onSubmit()">
+  <label for="anneeUniversitaire">Année Universitaire:</label>
+  <input type="text" id="anneeUniversitaire" formControlName="anneeUniversitaire" placeholder="Ex: 2023-2024" required>
+
+  <label for="estValide">Est Valide:</label>
+  <select id="estValide" formControlName="estValide" required>
+    <option value="" disabled>Choisir</option>
+    <option value="true">Oui</option>
+    <option value="false">Non</option>
+  </select>
+
+  <button type="submit" class="submit-btn">Modifier</button>
+</form>

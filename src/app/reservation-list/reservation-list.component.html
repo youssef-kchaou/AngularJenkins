@@ -1,0 +1,20 @@
+<button class="add-button" [routerLink]="'/add-reservation'">Ajouter</button>
+<table class="custom-table">
+    <thead>
+        <tr>
+            <th>Année Universitaire</th>
+            <th>Est Validé</th>
+            <th>Actions</th> <!-- Nouvelle colonne pour les actions -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reservation of reservation">
+            <td>{{ reservation.anneeUniversitaire }}</td>
+            <td>{{ reservation.estValide }}</td>
+            <td>
+                <button (click)="editReservation(reservation)">Modifier</button>
+                <button (click)="deleteReservation(reservation.idReservation)">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
