@@ -1,5 +1,5 @@
 # Étape 1 : Utilisation de l'image officielle de Node.js pour construire l'application
-FROM node:12.22.9 AS build
+FROM node:20.9.0 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install

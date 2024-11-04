@@ -5,9 +5,12 @@ import { AddReservationComponent } from './AddReservation/add-reservation/add-re
 import { EditReservationComponent } from './edit-reservation/edit-reservation.component';
 
 const routes: Routes = [
-  /*{ path: 'reservations', component: ReservationListComponent },
+  { path: '', redirectTo: '/reservations', pathMatch: 'full' }, // Redirection par défaut
+  { path: '**', redirectTo: '/reservations' }, // Gère les routes non définies
+  { path: 'reservations', component: ReservationListComponent },
   { path: 'add-reservation', component: AddReservationComponent },
-  { path: 'edit-reservation/:id', component: EditReservationComponent },*/
+  { path: 'edit-reservation/:id', component: EditReservationComponent },
+
 ];
 
 @NgModule({
