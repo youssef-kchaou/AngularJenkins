@@ -1,5 +1,5 @@
 # Étape 1 : Utilisation de l'image officielle de Node.js pour construire l'application
-FROM node:18 AS build
+FROM node:20.9.0 AS build
 
 # Définition du répertoire de travail dans le conteneur
 WORKDIR /app

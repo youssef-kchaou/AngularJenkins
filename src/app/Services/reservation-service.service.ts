@@ -7,7 +7,7 @@ import { Reservation } from '../Model/Reservation';
   providedIn: 'root'
 })
 export class ReservationServiceService {
-url="http://localhost:8089/tpfoyer/reservation"
+url="http://192.168.50.4:8089/tpfoyer/reservation"
   constructor(private http :HttpClient) { }
 
   getAllReservations(): Observable<Reservation[]> {
