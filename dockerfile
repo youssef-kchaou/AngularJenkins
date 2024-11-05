@@ -7,6 +7,6 @@ COPY . .
 RUN npm run build -- --output-path=dist
 
 FROM nginx:alpine
-COPY --from=build /app/dist/tp-foyer-front /usr/share/nginx/html
+COPY --from=build /dist/tp-foyer-front /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
